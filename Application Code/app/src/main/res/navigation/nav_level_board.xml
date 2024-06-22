@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/operationFeatureFragment1">
+
+    <fragment
+        android:id="@+id/operationFeatureFragment1"
+        android:name="com.example.beyondtheclassroom.levelboard.Display"
+        android:label="Operation Feature 1"/>
+</navigation>
