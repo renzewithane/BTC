@@ -1,10 +1,9 @@
-package com.example.beyondtheclassroom;
+package com.example.beyondtheclassroom.levelboard;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
+import androidx.fragment.app.FragmentTransaction;
+import com.example.beyondtheclassroom.R;
 
 public class LevelBoardActivity extends AppCompatActivity {
 
@@ -13,16 +12,11 @@ public class LevelBoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_board);
 
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.fragment_container_level_board);
-        NavController navController = navHostFragment.getNavController();
-        NavigationUI.setupActionBarWithNavController(this, navController);
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = ((NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.fragment_container_level_board)).getNavController();
-        return navController.navigateUp() || super.onSupportNavigateUp();
+        if (savedInstanceState == null) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            Display displayFragment = new Display();
+            transaction.replace(R.id.fragment_container, displayFragment);
+            transaction.commit();
+        }
     }
 }

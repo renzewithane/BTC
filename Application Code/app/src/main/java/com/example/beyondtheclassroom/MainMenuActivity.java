@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.beyondtheclassroom.levelboard.LevelBoardActivity;
+
 public class MainMenuActivity extends AppCompatActivity {
 
     @Override
