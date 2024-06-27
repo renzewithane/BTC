@@ -63,4 +63,6 @@ public class class_code extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_mainmenu_class_code, container, false);
     }
+
+
 }

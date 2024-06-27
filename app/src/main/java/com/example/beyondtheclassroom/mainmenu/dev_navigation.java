@@ -2,7 +2,6 @@ package com.example.beyondtheclassroom.mainmenu;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,51 +18,29 @@ import com.example.beyondtheclassroom.AssessmentsActivity;
 
 public class dev_navigation extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
-
-    public dev_navigation() {
-        // Required empty public constructor
-    }
-
-    public static dev_navigation newInstance(String param1, String param2) {
-        dev_navigation fragment = new dev_navigation();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_mainmenu_dev_navigation, container, false);
 
-        // Find buttons and set click listeners
         Button buttonMainMenu = view.findViewById(R.id.button_main_menu);
         buttonMainMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), splash_screen.class);
-                startActivity(intent);
+                splash_screen SplashScreen = new splash_screen();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.main_menu_container, SplashScreen);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
 
-        // Find buttons and set click listeners
         Button buttonOperations = view.findViewById(R.id.button_operations);
         buttonOperations.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,19 +85,6 @@ public class dev_navigation extends Fragment {
                 startActivity(intent);
             }
         });
-
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                intro Intro  = new intro();
-                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.main_menu_container, Intro);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        }, 5000);
 
         return view;
     }

@@ -21,10 +21,10 @@ public class splash_screen extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_mainmenu_splash_screen, container, false);
 
-        // Navigate to intro fragment after 5 seconds
+
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -33,7 +33,7 @@ public class splash_screen extends Fragment {
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
-        }, 5000); // 5000 milliseconds = 5 seconds
+        }, 5000);
 
         return view;
     }
