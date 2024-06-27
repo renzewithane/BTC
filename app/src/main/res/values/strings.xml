@@ -17,4 +17,10 @@
     <string name="class_code">Class Code</string>
     <string name="sample_classcode">Halimbawa: ESPBTC</string>
     <string name="proceed">Proceed</string>
+    <string name="halimbawa_rizal">Halimbawa: Rizal</string>
+    <string name="apelyido">Apelyido:</string>
+    <string name="halimbawa_jose">Halimbawa: Jose</string>
+    <string name="pangalan">Pangalan:</string>
+    <string name="halimbawa_pepe">Halimbawa: Pepe</string>
+    <string name="palayaw">Palayaw:</string>
 </resources>
