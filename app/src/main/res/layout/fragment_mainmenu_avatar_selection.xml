@@ -147,4 +147,16 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp" />
 
+    <ImageView
+        android:id="@+id/arrowButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/proceed"
+        android:paddingStart="8dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="RtlSymmetry" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
