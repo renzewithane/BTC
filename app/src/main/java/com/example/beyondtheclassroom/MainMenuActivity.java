@@ -19,7 +19,7 @@ public class MainMenuActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             splash_screen SplashScreen = new splash_screen();
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.splash_screen_container, SplashScreen)
+                    .add(R.id.main_menu_container, SplashScreen)
                     .commit();
         }
 

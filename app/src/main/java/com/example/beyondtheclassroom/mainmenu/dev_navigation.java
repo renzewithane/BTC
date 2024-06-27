@@ -2,14 +2,15 @@ package com.example.beyondtheclassroom.mainmenu;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.beyondtheclassroom.R;
-
 import com.example.beyondtheclassroom.OperationsActivity;
 import com.example.beyondtheclassroom.LevelBoardActivity;
 import com.example.beyondtheclassroom.UserAvatarActivity;
@@ -107,6 +108,19 @@ public class dev_navigation extends Fragment {
                 startActivity(intent);
             }
         });
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                intro Intro  = new intro();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.main_menu_container, Intro);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        }, 5000);
 
         return view;
     }
