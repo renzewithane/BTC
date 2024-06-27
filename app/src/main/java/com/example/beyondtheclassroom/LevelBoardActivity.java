@@ -13,16 +13,6 @@ public class LevelBoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levelboard);
 
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.fragment_container_level_board);
-        NavController navController = navHostFragment.getNavController();
-        NavigationUI.setupActionBarWithNavController(this, navController);
-    }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = ((NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.fragment_container_level_board)).getNavController();
-        return navController.navigateUp() || super.onSupportNavigateUp();
     }
 }
