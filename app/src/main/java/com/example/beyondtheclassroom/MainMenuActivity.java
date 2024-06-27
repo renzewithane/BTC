@@ -17,9 +17,9 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mainmenu);
 
         if (savedInstanceState == null) {
-            splash_screen SplashScreen = new splash_screen();
+            dev_navigation DevNav = new dev_navigation();
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.main_menu_container, SplashScreen)
+                    .add(R.id.main_menu_container, DevNav)
                     .commit();
         }
 
