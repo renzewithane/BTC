@@ -12,12 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BeyondTheClassroom"
         tools:targetApi="31">
-        <activity
-            android:name=".levelboard.LevelAdapter"
-            android:exported="false" />
+
         <activity
             android:name=".MainMenuActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:theme="@style/Theme.BeyondTheClassroom">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".AssessmentsActivity"
             android:exported="false" />
@@ -33,16 +38,6 @@
         <activity
             android:name=".OperationsActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.BeyondTheClassroom">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
