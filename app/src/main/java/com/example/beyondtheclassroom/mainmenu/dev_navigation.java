@@ -53,6 +53,16 @@ public class dev_navigation extends Fragment {
         View view = inflater.inflate(R.layout.fragment_mainmenu_dev_navigation, container, false);
 
         // Find buttons and set click listeners
+        Button buttonMainMenu = view.findViewById(R.id.button_main_menu);
+        buttonMainMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), splash_screen.class);
+                startActivity(intent);
+            }
+        });
+
+        // Find buttons and set click listeners
         Button buttonOperations = view.findViewById(R.id.button_operations);
         buttonOperations.setOnClickListener(new View.OnClickListener() {
             @Override
