@@ -17,4 +17,7 @@
         litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
         diam, vel rutrum tellus vulputate quis.
     </string>
+    <string name="class_code">Class Code</string>
+    <string name="sample_classcode">Halimbawa: ESPBTC</string>
+    <string name="proceed">Proceed</string>
 </resources>

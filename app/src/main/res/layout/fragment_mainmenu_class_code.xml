@@ -1,47 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainmenu.splash_screen">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Class Code Label -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Class Code"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="8dp"/>
+            android:layout_gravity="left"
+            android:paddingBottom="8dp"
+            android:text="@string/class_code"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
-        <!-- Class Code Entry Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Entry Box for Class Code -->
             <EditText
                 android:id="@+id/classCodeEntry"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Enter Class Code"
-                android:inputType="text"/>
+                android:hint="@string/sample_classcode"
+                android:inputType="text" />
 
-            <!-- Arrow Button -->
             <ImageView
                 android:id="@+id/arrowButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/logo"
-                android:contentDescription="Proceed"
                 android:layout_gravity="center_vertical"
-                android:paddingStart="8dp"/>
+                android:contentDescription="@string/proceed"
+                android:paddingStart="8dp"
+                android:src="@drawable/logo" />
         </LinearLayout>
 
     </LinearLayout>
-</layout>
+</androidx.constraintlayout.widget.ConstraintLayout>
