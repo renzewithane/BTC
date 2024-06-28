@@ -25,4 +25,11 @@
     <string name="palayaw">Palayaw:</string>
     <string name="bilang_parangal">Bilang Parangal</string>
     <string name="story_title">Story Title</string>
+    <string name="story_narration_placeholder">Lorem Ipsum</string>
+    <string name="gawin_ang_tama">GAWIN ANG TAMA</string>
+    <string name="quiz_item">Item</string>
+    <string name="quiz_time">Time</string>
+    <string name="quiz_rewards">0000</string>
+    <string name="sample_question">Naniniwala ka ba na ang katatagan ng loob ay maaaring maipakita sa pamamagitan ng pagtulong sa kapuwa?</string>
+    <string name="next_button_desc">next</string>
 </resources>
