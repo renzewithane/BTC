@@ -33,7 +33,7 @@ public class splash_screen extends Fragment {
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
-        }, 5000);
+        }, 3000);
 
         return view;
     }
