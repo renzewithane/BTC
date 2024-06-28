@@ -23,4 +23,6 @@
     <string name="pangalan">Pangalan:</string>
     <string name="halimbawa_pepe">Halimbawa: Pepe</string>
     <string name="palayaw">Palayaw:</string>
+    <string name="bilang_parangal">Bilang Parangal</string>
+    <string name="story_title">Story Title</string>
 </resources>
