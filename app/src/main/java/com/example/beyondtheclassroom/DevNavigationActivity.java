@@ -21,11 +21,8 @@ public class DevNavigationActivity extends AppCompatActivity {
         buttonMainMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                splash_screen SplashScreen = new splash_screen();
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.main_menu_container, SplashScreen);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                Intent intent = new Intent(DevNavigationActivity.this, MainMenuActivity.class);
+                startActivity(intent);
             }
         });
 
