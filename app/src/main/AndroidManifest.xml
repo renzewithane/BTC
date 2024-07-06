@@ -13,10 +13,10 @@
         android:theme="@style/Theme.BeyondTheClassroom"
         tools:targetApi="31">
         <activity
-            android:name=".DevNavigationActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainMenuActivity"
+            android:exported="false"  />
+        <activity
+            android:name=".DevNavigationActivity"
             android:exported="true"
             android:theme="@style/Theme.BeyondTheClassroom">
             <intent-filter>
