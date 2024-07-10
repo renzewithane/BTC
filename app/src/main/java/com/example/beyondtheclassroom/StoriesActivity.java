@@ -2,8 +2,10 @@ package com.example.beyondtheclassroom;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.example.beyondtheclassroom.stories.read_layout;
+import com.example.beyondtheclassroom.stories.library;
 
 public class StoriesActivity extends AppCompatActivity {
 
@@ -13,11 +15,19 @@ public class StoriesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stories);
 
         if (savedInstanceState == null) {
-            read_layout ReadLayout = new read_layout();
+            String fragmentToLoad = getIntent().getStringExtra("fragment_to_load");
+
+            Fragment selectedFragment;
+            if ("library".equals(fragmentToLoad)) {
+                selectedFragment = new library();
+            } else {
+                selectedFragment = new read_layout();
+            }
+
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.stories_container, ReadLayout)
+                    .replace(R.id.stories_container, selectedFragment)
                     .commit();
         }
-
     }
+
 }

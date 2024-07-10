@@ -33,7 +33,7 @@ public class LevelBoardActivity extends AppCompatActivity {
         ImageView LibraryButton = findViewById(R.id.library_tab);
         LibraryButton.setOnClickListener(view -> {
             Intent intent = new Intent(LevelBoardActivity.this, StoriesActivity.class);
-            intent.putExtra("library", "com.example.beyondtheclassroom.stories.library");
+            intent.putExtra("fragment_to_load", "library");
             startActivity(intent);
         });
 
