@@ -2,11 +2,8 @@ package com.example.beyondtheclassroom;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
 
-import com.example.beyondtheclassroom.mainmenu.splash_screen;
+import com.example.beyondtheclassroom.stories.read_layout;
 
 public class StoriesActivity extends AppCompatActivity {
 
@@ -14,6 +11,13 @@ public class StoriesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stories);
+
+        if (savedInstanceState == null) {
+            read_layout ReadLayout = new read_layout();
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.stories_container, ReadLayout)
+                    .commit();
+        }
 
     }
 }

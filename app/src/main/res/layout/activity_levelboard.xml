@@ -67,17 +67,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/top_bar" />
 
-    <!-- Fragment Display Container -->
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container_view"
+
+    <!-- FrameLayout for Fragment -->
+    <FrameLayout
+        android:id="@+id/levelboard_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="0dp"
         app:layout_constraintTop_toBottomOf="@+id/top_bar"
         app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:navGraph="@navigation/nav_graph"
-        tools:layout="@layout/fragment_levelboard_background" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Bottom Bar -->
     <ImageView
@@ -92,7 +92,7 @@
 
     <!-- Achievements Tab -->
     <ImageView
-        android:id="@+id/achievements_tab"
+        android:id="@+id/library_tab"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginBottom="40dp"

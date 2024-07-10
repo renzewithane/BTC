@@ -13,8 +13,6 @@ import com.example.beyondtheclassroom.R;
 
 public class library extends Fragment {
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
