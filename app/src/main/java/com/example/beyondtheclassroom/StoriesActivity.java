@@ -2,9 +2,8 @@ package com.example.beyondtheclassroom;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
+
+import com.example.beyondtheclassroom.stories.read_layout;
 
 public class StoriesActivity extends AppCompatActivity {
 
@@ -13,16 +12,12 @@ public class StoriesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stories);
 
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.fragment_container_stories);
-        NavController navController = navHostFragment.getNavController();
-        NavigationUI.setupActionBarWithNavController(this, navController);
-    }
+        if (savedInstanceState == null) {
+            read_layout ReadLayout = new read_layout();
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.stories_container, ReadLayout)
+                    .commit();
+        }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = ((NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.fragment_container_stories)).getNavController();
-        return navController.navigateUp() || super.onSupportNavigateUp();
     }
 }
