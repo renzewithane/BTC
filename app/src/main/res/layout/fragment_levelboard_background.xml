@@ -13,59 +13,15 @@
         android:layout_height="match_parent"
         android:background="@drawable/levelboard_bg">
 
-        <LinearLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- ImageView -->
-<<<<<<< Updated upstream
-        `<ImageView
+        <ImageView
             android:id="@+id/long_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/levelboard_bg"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:contentDescription="@null" />`
+            android:contentDescription="@null" />
 
-
-            <!-- Buttons Container -->
-            <LinearLayout
-                android:id="@+id/buttonContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button 2"
-                    android:layout_margin="16dp" />
-
-                <!-- Add more buttons and adjust margins as needed -->
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="Button 1" />
-=======
-            <ImageView
-                android:id="@+id/long_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/levelboard_bg"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:contentDescription="@null" />
->>>>>>> Stashed changes
-        </LinearLayout>
     </ScrollView>
 
 
