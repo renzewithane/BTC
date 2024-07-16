@@ -8,6 +8,18 @@
     android:layout_height="match_parent"
     tools:context=".LevelBoardActivity">
 
+    <!-- FrameLayout for Fragment -->
+    <FrameLayout
+        android:id="@+id/levelboard_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_bar"
+        app:layout_constraintWidth_default="spread" />
+
     <!-- Top Bar -->
     <ImageView
         android:id="@+id/top_bar"
@@ -66,20 +78,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/top_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/top_bar" />
-
-
-    <!-- FrameLayout for Fragment -->
-    <FrameLayout
-        android:id="@+id/levelboard_container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/top_bar"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_default="spread"
-        app:layout_constraintWidth_default="spread" />
 
 
     <!-- Bottom Bar -->
