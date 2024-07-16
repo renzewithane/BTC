@@ -10,7 +10,8 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/levelboard_bg">
 
         <LinearLayout
             android:id="@+id/container"
@@ -19,14 +20,15 @@
             android:orientation="vertical">
 
             <!-- ImageView -->
-            <ImageView
-                android:id="@+id/long_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/levelboard_bg"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:contentDescription="@null" />
+        `<ImageView
+            android:id="@+id/long_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/levelboard_bg"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null" />`
+
 
             <!-- Buttons Container -->
             <LinearLayout
