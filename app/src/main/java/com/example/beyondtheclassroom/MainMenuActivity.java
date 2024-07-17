@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.beyondtheclassroom.mainmenu.avatar_selection;
+import com.example.beyondtheclassroom.mainmenu.class_code;
 import com.example.beyondtheclassroom.mainmenu.splash_screen;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -17,9 +18,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainMenuActivity extends AppCompatActivity implements avatar_selection.OnSaveButtonClickListener {
+public class MainMenuActivity extends AppCompatActivity implements avatar_selection.OnSaveButtonClickListener, class_code
+
+        .OnClassCodeSubmitListener {
 
     private FirebaseFirestore db;
+    private String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,39 @@ public class MainMenuActivity extends AppCompatActivity implements avatar_select
                     .add(R.id.main_menu_container, SplashScreen)
                     .commit();
         }
-    }   
+    }
+
+    @Override
+    public void onClassCodeSubmit(String classCode) {
+        saveClassCode(classCode);
+    }
+
+    private void saveClassCode(String classCode) {
+        if (userId == null) {
+            Toast.makeText(this, "User data not yet saved, please try again", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        DocumentReference userRef = db.collection("users").document(userId);
+
+        userRef
+                .update("classCode", classCode)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("MainMenuActivity", "Class code updated successfully");
+                        Toast.makeText(MainMenuActivity.this, "Class code updated", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("MainMenuActivity", "Error updating class code", e);
+                        Toast.makeText(MainMenuActivity.this, "Error updating class code: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
 
     @Override
     public void onSaveButtonClick(String firstName, String lastName, String nickname) {
