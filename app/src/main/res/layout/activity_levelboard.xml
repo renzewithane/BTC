@@ -13,7 +13,7 @@
         android:id="@+id/levelboard_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottom_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="spread"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,15 +80,6 @@
         app:layout_constraintTop_toTopOf="@+id/top_bar" />
 
 
-    <!-- Bottom Bar -->
-    <ImageView
-        android:id="@+id/bottom_bar"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/lower_bar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Achievements Tab -->
     <ImageView
@@ -106,11 +97,11 @@
         android:id="@+id/play_button"
         android:layout_width="187dp"
         android:layout_height="61dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="40dp"
         android:src="@drawable/button"
-        app:layout_constraintBottom_toBottomOf="@+id/bottom_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/leaderboard_tab"
+        app:layout_constraintStart_toStartOf="@+id/library_tab" />
 
     <!-- Leaderboard Tab -->
     <ImageView
